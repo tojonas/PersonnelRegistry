@@ -32,7 +32,7 @@ namespace PersonnelRegistry
             }
         }
         private static bool TryParseInput(string input, out Employee employee)
-        {
+        { 
             employee = new Employee();
 
             string[] parts = input.Split(",");
