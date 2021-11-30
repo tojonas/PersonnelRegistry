@@ -1,0 +1,16 @@
+C:\Users\jonas\source\repos\PersonnelRegistry\obj\Debug\net5.0\PersonnelRegistry.csproj.AssemblyReference.cache
+C:\Users\jonas\source\repos\PersonnelRegistry\obj\Debug\net5.0\PersonnelRegistry.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jonas\source\repos\PersonnelRegistry\obj\Debug\net5.0\PersonnelRegistry.AssemblyInfoInputs.cache
+C:\Users\jonas\source\repos\PersonnelRegistry\obj\Debug\net5.0\PersonnelRegistry.AssemblyInfo.cs
+C:\Users\jonas\source\repos\PersonnelRegistry\obj\Debug\net5.0\PersonnelRegistry.csproj.CoreCompileInputs.cache
+C:\Users\jonas\source\repos\PersonnelRegistry\bin\Debug\net5.0\PersonnelRegistry.exe
+C:\Users\jonas\source\repos\PersonnelRegistry\bin\Debug\net5.0\PersonnelRegistry.deps.json
+C:\Users\jonas\source\repos\PersonnelRegistry\bin\Debug\net5.0\PersonnelRegistry.runtimeconfig.json
+C:\Users\jonas\source\repos\PersonnelRegistry\bin\Debug\net5.0\PersonnelRegistry.runtimeconfig.dev.json
+C:\Users\jonas\source\repos\PersonnelRegistry\bin\Debug\net5.0\PersonnelRegistry.dll
+C:\Users\jonas\source\repos\PersonnelRegistry\bin\Debug\net5.0\ref\PersonnelRegistry.dll
+C:\Users\jonas\source\repos\PersonnelRegistry\bin\Debug\net5.0\PersonnelRegistry.pdb
+C:\Users\jonas\source\repos\PersonnelRegistry\obj\Debug\net5.0\PersonnelRegistry.dll
+C:\Users\jonas\source\repos\PersonnelRegistry\obj\Debug\net5.0\ref\PersonnelRegistry.dll
+C:\Users\jonas\source\repos\PersonnelRegistry\obj\Debug\net5.0\PersonnelRegistry.pdb
+C:\Users\jonas\source\repos\PersonnelRegistry\obj\Debug\net5.0\PersonnelRegistry.genruntimeconfig.cache

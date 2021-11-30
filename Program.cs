@@ -20,6 +20,7 @@ namespace PersonnelRegistry
                     case "p":
                         PrintEmployees(employees);
                         break;
+
                     default:
                         Employee employee = null;
                         if (true == TryParseInput(input, out employee))
