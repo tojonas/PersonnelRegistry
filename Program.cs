@@ -36,6 +36,11 @@ namespace PersonnelRegistry
             employee = new Employee();
 
             string[] parts = input.Split(",");
+            if( parts.Length < 2 )
+            {
+                Console.WriteLine("Invalid format. Enter name and salary separated by comma");
+                return false;
+            }
             float salary = 0;
             if (string.IsNullOrEmpty(parts[0]))
             {
