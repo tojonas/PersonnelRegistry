@@ -42,12 +42,13 @@ namespace PersonnelRegistry
                 return false;
             }
             float salary = 0;
-            if (string.IsNullOrEmpty(parts[0]))
+            string name = parts[0].Trim();
+            if (string.IsNullOrEmpty(name))
             {
                 Console.WriteLine("Invalid name [{0}]", parts[0]);
                 return false;
             }
-            employee.Name = parts[0];
+            employee.Name = name;
             if (float.TryParse(parts[1], out salary) == false || salary < 0)
             {
                 Console.WriteLine("Invalid salary [{0}]", parts[1]);
