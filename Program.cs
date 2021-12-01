@@ -18,12 +18,17 @@ namespace PersonnelRegistry
                         return;
 
                     case "p":
-                        PrintEmployees(employees);
+                        employees.ForEach( e => Console.WriteLine(e) );
                         break;
 
                     default:
-                        Employee employee = null;
-                        if (true == TryParseInput(input, out employee))
+                        string error = null;
+                        Employee employee = Employee.TryParse(input, out error );
+                        if (null == employee)
+                        {
+                            Console.WriteLine(error);
+                        }
+                        else
                         {
                             employees.Add(employee);
                         }
@@ -31,40 +36,5 @@ namespace PersonnelRegistry
                 }
             }
         }
-        private static bool TryParseInput(string input, out Employee employee)
-        { 
-            employee = new Employee();
-
-            string[] parts = input.Split(",");
-            if( parts.Length < 2 )
-            {
-                Console.WriteLine("Invalid format. Enter name and salary separated by comma");
-                return false;
-            }
-            float salary = 0;
-            string name = parts[0].Trim();
-            if (string.IsNullOrEmpty(name))
-            {
-                Console.WriteLine("Invalid name [{0}]", parts[0]);
-                return false;
-            }
-            employee.Name = name;
-            if (float.TryParse(parts[1], out salary) == false || salary < 0)
-            {
-                Console.WriteLine("Invalid salary [{0}]", parts[1]);
-                return false;
-            }
-            employee.Salary = salary;
-            return true;
-        }
-
-        private static void PrintEmployees(IEnumerable<Employee> list)
-        {
-            foreach (var employee in list)
-            {
-                Console.WriteLine(employee);
-            }
-        }
-
     }
 }
