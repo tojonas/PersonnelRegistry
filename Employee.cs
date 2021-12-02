@@ -9,14 +9,6 @@ namespace PersonnelRegistry
 
         public Employee(string name, float salary)
         {
-            if (string.IsNullOrWhiteSpace(name))
-            {
-                throw new ArgumentException(nameof(name), $"Invalid {nameof(name)} [{name}]"); 
-            }
-            if (salary < 0 )
-            {
-                throw new ArgumentException(nameof(salary), $"Invalid {nameof(salary)} [{salary}]");
-            }
             Name = name;
             Salary = salary;
         }
