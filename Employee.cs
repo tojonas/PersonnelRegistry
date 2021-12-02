@@ -4,11 +4,19 @@ namespace PersonnelRegistry
 {
     public class Employee
     {
-        public string Name { get; set; }
-        public float Salary { get; set; }
+        public string Name { get; }
+        public float Salary { get; }
 
         public Employee(string name, float salary)
         {
+            if (string.IsNullOrWhiteSpace(name))
+            {
+                throw new ArgumentException(nameof(name), $"Invalid {nameof(name)} [{name}]"); 
+            }
+            if (salary < 0 )
+            {
+                throw new ArgumentException(nameof(salary), $"Invalid {nameof(salary)} [{salary}]");
+            }
             Name = name;
             Salary = salary;
         }
@@ -25,7 +33,7 @@ namespace PersonnelRegistry
             string[] parts = input.Split(",");
             if (parts.Length < 2)
             {
-                error = "Invalid format. Enter name and salary separated by comma";
+                error = "Invalid format. Name and salary should be separated by comma Name,Salary";
                 return null;
             }
 
