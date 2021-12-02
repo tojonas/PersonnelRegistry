@@ -4,18 +4,18 @@ namespace PersonnelRegistry
 {
     public class Employee
     {
+        public string Name { get; set; }
+        public float Salary { get; set; }
+
         public Employee(string name, float salary)
         {
             Name = name;
             Salary = salary;
         }
 
-        public string Name { get; set; }
-        public float Salary { get; set; }
-
         public override string ToString()
         {
-            return string.Format("Name:{0} Salary:{1}", Name, Salary);
+            return $"Name:{Name} Salary:{Salary}";
         }
 
         public static Employee TryParse(string input, out string error)
@@ -32,7 +32,7 @@ namespace PersonnelRegistry
             string name = parts[0].Trim();
             if (string.IsNullOrWhiteSpace(name))
             {
-                error = string.Format("Invalid name [{0}]", parts[0]);
+                error = $"Invalid name [{parts[0]}]";
                 return null;
             }
 
@@ -40,7 +40,7 @@ namespace PersonnelRegistry
 
             if (float.TryParse(parts[1], out salary) == false || salary < 0)
             {
-                error = string.Format("Invalid salary [{0}]", parts[1]);
+                error = $"Invalid salary [{parts[1]}]";
                 return null;
             }
             return new Employee(name, salary);
